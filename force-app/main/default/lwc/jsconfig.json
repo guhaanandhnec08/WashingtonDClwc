@@ -5,6 +5,12 @@
         "paths": {
             "c/demo1": [
                 "demo1/demo1.js"
+            ],
+            "c/search-input": [
+                "searchInput/searchInput.js"
+            ],
+            "c/youtube-search-lwc": [
+                "youtubeSearchLWC/youtubeSearchLWC.js"
             ]
         }
     },
