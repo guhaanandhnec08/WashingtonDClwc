@@ -3,6 +3,9 @@
         "experimentalDecorators": true,
         "baseUrl": ".",
         "paths": {
+            "c/apex-wiring-demo2": [
+                "apexWiringDemo2/apexWiringDemo2.js"
+            ],
             "c/demo1": [
                 "demo1/demo1.js"
             ],

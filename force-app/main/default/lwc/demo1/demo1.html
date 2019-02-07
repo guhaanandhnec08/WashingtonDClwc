@@ -1,8 +1,45 @@
 <template>
-    <lightning-card title="HelloWorld" icon-name="custom:custom14">
+    <lightning-card title="Welcome!" icon-name="custom:custom14">
         <div class="slds-m-around_medium">
-            <p>Hello, {greeting}!</p>
-            <lightning-input label="Name" value={greeting} onchange={changeHandler}></lightning-input>
+            <div class="slds-grid slds-gutters">
+
+                <div class="slds-col slds-size_1-of-3 slds-align_absolute-center">
+                    <img src={trailheadLogoUrl} alt="Trailhead logo">
+                </div>
+
+                <div class="slds-col slds-size_1-of-3  slds-align_absolute-center">
+                    <p>Hello, <b>{firstName} {lastName}! </b>
+                        <template if:true={renderEventStr}> Welcome to our amazing <b>{eventName}</b>!!!</template>
+                    </p>
+                </div>
+
+                <div class="slds-col slds-size_1-of-3 slds-align_absolute-center">
+                    <img src={einsteinUrl} alt="Einstein logo">
+                </div>
+
+            </div>
         </div>
+
+        <br />
+
+        <div class="slds-m-around_medium">
+            <div class="slds-grid slds-gutters">
+
+                <div class="slds-col slds-size_1-of-3">
+                    <lightning-input name='firstName' label="First Name" value={firstName} onchange={changeHandler}></lightning-input>
+                </div>
+
+                <div class="slds-col slds-size_1-of-3">
+                    <lightning-input name='lastName' label="Last Name" value={lastName} onchange={changeHandler}></lightning-input>
+                </div>
+
+                <div class="slds-col slds-size_1-of-3">
+                    <lightning-input name='eventName' label="Event Name" value={eventName} onchange={changeHandler}></lightning-input>
+                </div>
+
+            </div>
+        </div>
+        <!-- <lightning-input label="Name" value={greeting} onchange={changeHandler}></lightning-input> -->
+
     </lightning-card>
 </template>
